@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Password Generator</title>
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- title -->
+    <h1 class="title">
+      Password Generator
+    </h1>
+    <form id="form">
+
+      <div class="password-box box">
+        <!-- display password -->
+        <input type="text" id="input-password" class="input-password" placeholder="Click Generate" readonly>
+        <!-- copy-to-clipboard button -->
+        <button type="button" class="btn btn-copy" id="copy-to-clipboard">
+          <i class="fa-regular fa-copy"></i>
+        </button>
+      </div>
+
+      <div class="range-box">
+        <h3 class="box-title">Password Length</h3>
+        <div class="length-box box">
+          <!-- range slider -->
+          <input type="range" id="password-length" class="password-length" value="8" min="6" max="32">
+          <!-- show password length -->
+          <span id="display-length"></span>
+        </div>
+      </div>
+
+      <div class="settings-box">
+        <h3 class="box-title">Settings</h3>
+        <div class="includes-box box">
+          <!-- uppercase -->
+          <div class="uppercase row">
+            <input type="checkbox" id="check-ucase" class="checkbox">
+            <label for="check-ucase">
+              Include Uppercase letters
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <!-- lowercase -->
+          <div class="lowercase row">
+            <input type="checkbox" id="check-lcase" class="checkbox">
+            <label for="check-lcase">
+              Include Lowercase letters
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <!-- numbers -->
+          <div class="number row">
+            <input type="checkbox" id="check-number" class="checkbox">
+            <label for="check-number">
+              Include Numbers
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <!-- symbols -->
+          <div class="uppercase row">
+            <input type="checkbox" id="check-symbol" class="checkbox">
+            <label for="check-symbol">
+              Include Symbols
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- click to generate button -->
+      <div class="button-box">
+        <button class="btn btn-generate">
+          Generate Password
+          <span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- javascript -->
+  <script src="./app.js"></script>
+</body>
+
+</html>
