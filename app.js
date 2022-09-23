@@ -57,7 +57,7 @@ function generatePassword(passwordLength, checkedUppercase, checkedLowercase, ch
   // show alert if none of the checkboxes is checked
   if (!checkedUppercase && !checkedLowercase && !checkedNumber && !checkedSymbol) {
     alert('Please check atleast one checkbox')
-    window.location = '/'
+    window.location = './'
   }
 
   console.log(checkedUppercase + checkedLowercase + checkedNumber + checkedSymbol)
